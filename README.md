@@ -4,6 +4,8 @@ A single-page JS app that allows users to select files from cloud storage or
 their computer and obtain links to them to share with others.
 Links can be protected with passwords and can also be set to expire.
 
+View it in action at https://vinodc.github.io/kloudless-file-sharer/
+
 ## Usage
 
 ### Configuration
