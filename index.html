@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Kloudless File Sharing Demo</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.datetimepicker.css" />
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="css/cover.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">Kloudless File Sharing Demo</h3>
+              <nav>
+                <ul class="nav masthead-nav">
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <div class="inner cover" id="cover-wrapper">
+            <h1 class="cover-heading">Share Large Files</h1>
+            <p class="lead">
+              Select large files from your computer or cloud storage and
+              share a link to them with others.
+            </p>
+            <p class="lead">
+              <a href="#" class="btn btn-lg btn-default" id="start">Get started</a>
+            </p>
+          </div>
+
+          <div id="explorer-wrapper" style="display: none;">
+            
+            <div id="link-options">
+              <form class="form-inline">
+                <div class="form-group" id="password-form-group">
+                  <label for="password">Password</label>
+                  <input type="password" class="form-control" id="password">
+                </div>
+                <div class="form-group" id="expiration-form-group">
+                  <label for="expiration">Expiration</label>
+                  <input type="text" class="form-control" id="expiration">
+                </div>
+              </form>
+            </div>
+            
+            <div id="dropzone"></div>
+
+            <div id="results-wrapper" style="display: none;">
+              <h4 class="text-left">Links</h4>
+              <div id="results"></div>
+            </div>
+  
+          </div>
+
+          <div class="mastfoot">
+            <div class="inner">
+              <p>
+                Powered by the
+                <a href="https://github.com/kloudless/file-explorer">Kloudless File Explorer</a>
+                and
+                <a href="http://getbootstrap.com">Bootstrap</a>.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Templates -->
+
+    <script id="resultRowTempl" type="text/x-jsrender">
+      <p class="result-row bg-info text-left">
+        {{if password}}
+        &#x1f512;
+        {{/if}}
+        <span class="file-name">{{:name}}:</span>
+        <span class="select-all">
+          <a href="{{:url}}" target="_blank">
+            {{:url}}
+          </a>
+        </span>
+        {{if expiration}}
+        (expires {{:expiration}})
+        {{/if}}
+      </p>
+    </script>
+    
+    <!-- JavaScript -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+    <script src="js/jquery.datetimepicker.full.min.js"></script>
+    <script src="js/jsrender.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+
+    <script src="https://static-cdn.kloudless.com/p/platform/sdk/kloudless.explorer.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

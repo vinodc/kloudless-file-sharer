@@ -1,0 +1,67 @@
+#dropzone {
+  width: 700px;
+  height: 50px;
+}
+
+#explorer-wrapper {
+  text-shadow: none;
+  margin-top: 30px;
+}
+
+#link-options {
+  margin-right: 0px;
+  margin-left: 0px;
+  position: relative;
+  padding: 45px 15px 15px;
+  margin: 0px 0px 15px;
+  background-color: #FFF;
+  border-color: #DDD;
+  border-width: 1px;
+  border-radius: 4px 4px 0px 0px;
+  border-style: solid;
+  box-shadow: none;
+}
+
+#link-options::after {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #959595;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  content: "Link Options";
+}
+
+#link-options label {
+  margin-right: 20px;
+}
+
+#link-options input {
+  min-width: 200px;
+}
+
+#password-form-group {
+  margin-right: 70px;
+}
+
+.select-all {
+  -moz-user-select: all;
+  -webkit-user-select: all;
+  -ms-user-select: all;
+  user-select: all;
+}
+
+#results-wrapper {
+  margin-top: 25px;
+}
+
+.result-row {
+  padding: 10px;
+}
+
+.result-row .file-name {
+  font-weight: bold;
+  margin-right: 15px;
+}
